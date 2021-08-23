@@ -89,10 +89,10 @@ export const JsonEditorDialog: React.FC<JsonEditorDialogProps> = ({
     [type, modelUri]
   );
 
-  const model = useMemo(() => getMonacoModelForUri(modelUri, initialContent), [
-    initialContent,
-    modelUri,
-  ]);
+  const model = useMemo(
+    () => getMonacoModelForUri(modelUri, initialContent),
+    [initialContent, modelUri]
+  );
 
   const setModel = useCallback(
     (editor: monaco.editor.IStandaloneCodeEditor) => {
@@ -138,11 +138,11 @@ export const JsonEditorDialog: React.FC<JsonEditorDialogProps> = ({
       <DialogContent className={classes.dialogContent}>
         <MonacoEditor
           language='json'
-          editorDidMount={(editor) => {
+          editorDidMount={(editor: any) => {
             setModel(editor);
             editor.focus();
           }}
-          editorWillMount={configureEditor}
+          editorWillMount={configureEditor as any}
         />
       </DialogContent>
     </Dialog>

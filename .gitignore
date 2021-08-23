@@ -4,3 +4,6 @@ node_modules/
 yalc.lock
 build/
 .eslintcache
+/app/package-lock.json
+/jsonforms-editor/package-lock.json
+/testapp/package-lock.json

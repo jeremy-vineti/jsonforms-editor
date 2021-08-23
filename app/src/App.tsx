@@ -10,22 +10,18 @@ import JsonFormsEditor, {
   defaultSchemaProviders,
   ReactMaterialPreview,
 } from '@jsonforms/editor/src';
+import { WorkflowSchemaService } from '@vinetiworks/workflow-schema-service';
 import React from 'react';
 
-import { AngularMaterialPreview } from './components/AngularMaterialPreview';
 import { Footer } from './components/Footer';
-import { ExampleSchemaService } from './core/schemaService';
 
-const schemaService = new ExampleSchemaService();
+const schemaService = new WorkflowSchemaService();
 export const App = () => (
   <JsonFormsEditor
     schemaService={schemaService}
     schemaProviders={defaultSchemaProviders}
     schemaDecorators={defaultSchemaDecorators}
-    editorTabs={[
-      { name: 'Preview (React)', Component: ReactMaterialPreview },
-      { name: 'Preview (Angular)', Component: AngularMaterialPreview },
-    ]}
+    editorTabs={[{ name: 'Preview (React)', Component: ReactMaterialPreview }]}
     footer={Footer}
   />
 );

@@ -135,8 +135,8 @@ const RuleEditor: React.FC<ControlProps> = (props) => {
 
           <MonacoEditor
             language='json'
-            editorWillMount={configureEditor}
-            editorDidMount={setModel}
+            editorWillMount={configureEditor as any}
+            editorDidMount={setModel as any}
             height={200}
             options={{
               formatOnPaste: true,

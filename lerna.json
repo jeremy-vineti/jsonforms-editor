@@ -1,4 +1,14 @@
 {
-  "packages": ["app", "jsonforms-editor", "testapp"],
+  "packages": [
+    "app",
+    "jsonforms-editor",
+    "testapp",
+    "../workflow-schema-service"
+  ],
+  "command": {
+    "bootstrap": {
+      "nohoist": ["@vinetiworks/workflow-schema-service"]
+    }
+  },
   "version": "0.1.0"
 }

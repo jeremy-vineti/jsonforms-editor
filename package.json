@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "jest-environment-jsdom-fourteen": "^1.0.1",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "@vinetiworks/workflow-schema-service": "1.0.0"
   }
 }
